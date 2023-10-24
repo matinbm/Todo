@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} home {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static "hello.css" %}"/>
+{% endblock %}
+
+{% block content %}
+    {% for todo in todos %}
+        <h2>
+            {{ todo.title }} <br>
+            {{ todo.body }} <br>
+            {{ todo.create }}
+            <hr>
+        </h2>
+        <button class="delete">delete</button>
+
+    {% endfor %}
+{% endblock %}
+
