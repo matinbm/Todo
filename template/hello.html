@@ -10,10 +10,12 @@
 
 {% block content %}
     {% for todo in todos %}
-        <h2>
-            {{ todo.title }} <br>
 
-        </h2>
+        <a href="/detail/{{ todo.id }}">{{ todo.title }}</a>
+        <br>
+
+
+
         <button class="delete">delete</button>
 
     {% endfor %}
