@@ -7,6 +7,6 @@ def say_hello(request):
      all = Todo.objects.all()
      return render(request,'hello.html', {'todos':all})
 
-def detail(request,todo_id):
-
-
+def detail(request, todo_id):
+     todo = Todo.objects.get(id=todo_id)
+     return render(request,'detail.html',{'todo':todo})
